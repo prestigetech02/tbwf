@@ -10,7 +10,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-forest-950 text-cream-200">
+    <footer className="relative bg-white text-forest-800 ring-1 ring-forest-100">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 py-16">
         <div className="grid gap-10 md:grid-cols-3">
           {/* Brand */}
@@ -22,7 +22,7 @@ export default function Footer() {
                 className="h-12 w-auto"
               />
             </div>
-            <p className="mt-5 max-w-xs text-sm leading-relaxed text-cream-300">
+            <p className="mt-5 max-w-xs text-sm leading-relaxed text-forest-600">
               The marketplace empowerment arm of Victorious Praying Women
               Ministry — equipping women to build thriving businesses and
               become kingdom influencers.
@@ -35,7 +35,7 @@ export default function Footer() {
                     key={s.label}
                     href={s.href}
                     aria-label={s.label}
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-forest-800 text-cream-200 ring-1 ring-forest-700 transition-all hover:bg-gold-400 hover:text-forest-900 hover:-translate-y-0.5"
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-forest-50 text-forest-700 ring-1 ring-forest-100 transition-all hover:bg-gold-400 hover:text-forest-900 hover:-translate-y-0.5"
                   >
                     <Icon className="h-4 w-4" />
                   </a>
@@ -46,7 +46,7 @@ export default function Footer() {
 
           {/* Quick links */}
           <div>
-            <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-gold-300">
+            <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-gold-600">
               Quick Links
             </h4>
             <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3">
@@ -55,19 +55,19 @@ export default function Footer() {
                   {link.href ? (
                     <Link
                       to={link.href}
-                      className="text-sm text-cream-300 transition-colors hover:text-gold-300"
+                      className="text-sm text-forest-600 transition-colors hover:text-gold-600"
                     >
                       {link.label}
                     </Link>
                   ) : (
-                    <span className="text-sm text-cream-300">{link.label}</span>
+                    <span className="text-sm text-forest-600">{link.label}</span>
                   )}
                 </li>
               ))}
               <li>
                 <Link
                   to="/#support"
-                  className="text-sm text-cream-300 transition-colors hover:text-gold-300"
+                  className="text-sm text-forest-600 transition-colors hover:text-gold-600"
                 >
                   Support Us
                 </Link>
@@ -77,10 +77,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-gold-300">
+            <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-gold-600">
               Contact
             </h4>
-            <ul className="mt-5 space-y-3 text-sm text-cream-300">
+            <ul className="mt-5 space-y-3 text-sm text-forest-600">
               <li>VPWM Center, Faith District</li>
               <li>+1 (000) 000-0000</li>
               <li>hello@tbwf.org</li>
@@ -95,13 +95,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-forest-800 pt-7 text-center sm:flex-row sm:text-left">
-          <p className="text-xs text-cream-400">
+        <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-forest-100 pt-7 text-center sm:flex-row sm:text-left">
+          <p className="text-xs text-forest-500">
             © {new Date().getFullYear()} Thriving Business Women Fellowship. All
             rights reserved.
           </p>
-          <p className="inline-flex items-center gap-1.5 text-xs text-cream-400">
-            Built with <Heart className="h-3.5 w-3.5 text-gold-400" /> for the
+          <p className="inline-flex items-center gap-1.5 text-xs text-forest-500">
+            Built with <Heart className="h-3.5 w-3.5 text-gold-500" /> for the
             Kingdom
           </p>
         </div>

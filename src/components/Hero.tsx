@@ -1,21 +1,6 @@
 import { ArrowRight, HandHeart } from 'lucide-react';
-import { stats } from '@/data';
-import { useInView } from '@/hooks/useInView';
 
-const heroImg =
-  'https://images.pexels.com/photos/10375930/pexels-photo-10375930.jpeg?auto=compress&cs=tinysrgb&h=900&w=1400';
-
-function Counter({ value, suffix }: { value: number; suffix: string }) {
-  const { ref, inView } = useInView<HTMLSpanElement>({ threshold: 0.3 });
-  return (
-    <span ref={ref} className="inline-flex items-baseline">
-      <span className={`tabular-nums transition-opacity duration-700 ${inView ? 'opacity-100' : 'opacity-0'}`}>
-        {inView ? value : 0}
-      </span>
-      <span>{suffix}</span>
-    </span>
-  );
-}
+const heroImg = '/images/hero.png';
 
 export default function Hero() {
   return (
@@ -24,14 +9,13 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           src={heroImg}
-          alt="Professional woman in business meeting"
-          className="h-full w-full object-cover object-center"
+          alt="TBWF leaders and partners at a celebration gathering"
+          className="h-full w-full object-cover object-[center_top]"
         />
-        {/* Forest green tint — restores the original green overlay feel */}
-        <div className="absolute inset-0 bg-forest-800/55" />
-        <div className="absolute inset-0 bg-gradient-to-br from-forest-950/90 via-forest-900/75 to-forest-700/50" />
-        <div className="absolute inset-0 bg-gradient-to-r from-forest-950/60 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_30%,rgba(212,175,55,0.14),transparent_55%)]" />
+        {/* Darker on the left for text; fades so the photo reads clearly on the right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-forest-950/88 via-forest-900/55 to-forest-900/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-forest-950/50 via-transparent to-forest-950/25" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_30%,rgba(212,175,55,0.1),transparent_55%)]" />
       </div>
 
       {/* Decorative blobs */}
@@ -87,23 +71,6 @@ export default function Hero() {
                 <HandHeart className="h-4 w-4" />
                 Get Involved
               </a>
-            </div>
-
-            {/* Stats */}
-            <div
-              className="mt-14 flex gap-10 sm:gap-16 animate-fade-up"
-              style={{ animationDelay: '0.4s' }}
-            >
-              {stats.map((s) => (
-                <div key={s.label} className="border-l-[3px] border-gold-400/60 pl-5">
-                  <div className="font-serif text-4xl sm:text-5xl font-bold text-gold-300">
-                    <Counter value={s.value} suffix={s.suffix} />
-                  </div>
-                  <div className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-cream-300">
-                    {s.label}
-                  </div>
-                </div>
-              ))}
             </div>
 
           </div>

@@ -63,12 +63,7 @@ export default function About() {
                 businesses that bless their families, communities, and the
                 Kingdom.
               </p>
-              <p>
-                Rooted in character, compassion, and community, we walk
-                alongside women from every background — equipping them to
-                discover God-given potential and become kingdom influencers
-                wherever God has placed them.
-              </p>
+
             </div>
 
             {/* Callout quote */}

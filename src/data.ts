@@ -34,11 +34,15 @@ export const navLinks: NavLink[] = [
     children: [
       { label: 'TEDC', href: 'https://tedc.com.ng' },
       { label: 'Annual Business Summit', href: '/annual-business-summit' },
-      { label: 'InfluenceHER Conference', href: '/#influenceher-conference' },
-      { label: 'Mayokun Oreofe Initiative', href: '/#mayokun-oreofe-initiative' },
+      { label: 'InfluenceHER Conference', href: '/influenceher' },
+      { label: 'Mayokun Oreofe Initiative', href: '/mayokun-oreofe' },
+      {
+        label: 'Household of Faith in Celebration (HFIC)',
+        href: '/hfic',
+      },
     ],
   },
-  { label: 'Services', href: '/#pillars' },
+  { label: 'The Elim Centre', href: '/#support' },
   { label: 'Contact Us', href: '/contact' },
 ];
 
