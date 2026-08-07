@@ -1,0 +1,104 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --color-forest-50: #f1f7f2;
+  --color-forest-100: #dcebe0;
+  --color-forest-200: #bbd7c2;
+  --color-forest-300: #8fba9d;
+  --color-forest-400: #5d9472;
+  --color-forest-500: #3a7651;
+  --color-forest-600: #2a5d3f;
+  --color-forest-700: #1f4a33;
+  --color-forest-800: #173a27;
+  --color-forest-900: #102a1c;
+  --color-forest-950: #081a11;
+
+  --color-gold-50: #fbf7ed;
+  --color-gold-100: #f5ecd0;
+  --color-gold-200: #ecd9a3;
+  --color-gold-300: #e0c06d;
+  --color-gold-400: #d4af37;
+  --color-gold-500: #c19a2a;
+  --color-gold-600: #a67a20;
+  --color-gold-700: #84591d;
+  --color-gold-800: #6e481f;
+  --color-gold-900: #5d3c1d;
+
+  --color-cream-50: #fdfcf8;
+  --color-cream-100: #faf8f1;
+  --color-cream-200: #f5f1e4;
+  --color-cream-300: #efe8d2;
+  --color-cream-400: #e6dab9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream-100);
+  color: var(--color-forest-950);
+}
+
+::selection {
+  background-color: var(--color-gold-300);
+  color: var(--color-forest-900);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out both;
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.contact-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-forest-200);
+  background: var(--color-cream-50);
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  color: var(--color-forest-900);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-input:focus {
+  outline: none;
+  border-color: var(--color-gold-400);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18);
+}
+
+.contact-input::placeholder {
+  color: var(--color-forest-300);
+}

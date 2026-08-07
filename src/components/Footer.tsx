@@ -1,0 +1,111 @@
+import { Link } from 'react-router-dom';
+import { Globe, MessageCircle, Share2, Heart } from 'lucide-react';
+import { navLinks } from '@/data';
+
+const socials = [
+  { icon: Globe, label: 'Facebook', href: '#' },
+  { icon: MessageCircle, label: 'Instagram', href: '#' },
+  { icon: Share2, label: 'YouTube', href: '#' },
+];
+
+export default function Footer() {
+  return (
+    <footer className="relative bg-forest-950 text-cream-200">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 py-16">
+        <div className="grid gap-10 md:grid-cols-3">
+          {/* Brand */}
+          <div>
+            <div className="flex items-center gap-3">
+              <img
+                src="/images/logo.png"
+                alt="TBWF — Thriving Business Women Fellowship"
+                className="h-12 w-auto"
+              />
+            </div>
+            <p className="mt-5 max-w-xs text-sm leading-relaxed text-cream-300">
+              The marketplace empowerment arm of Victorious Praying Women
+              Ministry — equipping women to build thriving businesses and
+              become kingdom influencers.
+            </p>
+            <div className="mt-6 flex gap-3">
+              {socials.map((s) => {
+                const Icon = s.icon;
+                return (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    aria-label={s.label}
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-forest-800 text-cream-200 ring-1 ring-forest-700 transition-all hover:bg-gold-400 hover:text-forest-900 hover:-translate-y-0.5"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Quick links */}
+          <div>
+            <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-gold-300">
+              Quick Links
+            </h4>
+            <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3">
+              {navLinks.map((link) => (
+                <li key={link.label}>
+                  {link.href ? (
+                    <Link
+                      to={link.href}
+                      className="text-sm text-cream-300 transition-colors hover:text-gold-300"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <span className="text-sm text-cream-300">{link.label}</span>
+                  )}
+                </li>
+              ))}
+              <li>
+                <Link
+                  to="/#support"
+                  className="text-sm text-cream-300 transition-colors hover:text-gold-300"
+                >
+                  Support Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-gold-300">
+              Contact
+            </h4>
+            <ul className="mt-5 space-y-3 text-sm text-cream-300">
+              <li>VPWM Center, Faith District</li>
+              <li>+1 (000) 000-0000</li>
+              <li>hello@tbwf.org</li>
+            </ul>
+            <Link
+              to="/contact"
+              className="mt-5 inline-flex items-center rounded-full bg-gold-400 px-5 py-2.5 text-sm font-semibold text-forest-900 transition-all hover:bg-gold-300 hover:-translate-y-0.5"
+            >
+              Join the Fellowship
+            </Link>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-forest-800 pt-7 text-center sm:flex-row sm:text-left">
+          <p className="text-xs text-cream-400">
+            © {new Date().getFullYear()} Thriving Business Women Fellowship. All
+            rights reserved.
+          </p>
+          <p className="inline-flex items-center gap-1.5 text-xs text-cream-400">
+            Built with <Heart className="h-3.5 w-3.5 text-gold-400" /> for the
+            Kingdom
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
