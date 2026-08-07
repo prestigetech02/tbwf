@@ -3,7 +3,6 @@ import {
   MapPin,
   Phone,
   Mail,
-  Clock,
   Send,
   CheckCircle2,
   HandHeart,
@@ -14,10 +13,23 @@ import { Link } from 'react-router-dom';
 import { useInView } from '@/hooks/useInView';
 
 const contactInfo = [
-  { icon: MapPin, label: 'Address', value: 'VPWM Center, Faith District' },
-  { icon: Phone, label: 'Phone', value: '+1 (000) 000-0000' },
-  { icon: Mail, label: 'Email', value: 'hello@tbwf.org' },
-  { icon: Clock, label: 'Office Hours', value: 'Mon – Fri, 9am – 5pm' },
+  {
+    icon: MapPin,
+    label: 'Visit us',
+    values: ['38 Opebi Road, Ikeja, Lagos, Nigeria'],
+  },
+  {
+    icon: Mail,
+    label: 'Send us an E-mail',
+    values: ['contact@tbwfelim.com', 'info@tbwfelim.com'],
+    hrefs: ['mailto:contact@tbwfelim.com', 'mailto:info@tbwfelim.com'],
+  },
+  {
+    icon: Phone,
+    label: 'Call us',
+    values: ['(+234) 802 368 8218'],
+    hrefs: ['tel:+2348023688218'],
+  },
 ];
 
 const waysToConnect = [
@@ -153,8 +165,26 @@ export default function ContactPage() {
                       <div className="text-xs font-semibold uppercase tracking-wider text-gold-600">
                         {item.label}
                       </div>
-                      <div className="mt-0.5 text-forest-800 font-medium">
-                        {item.value}
+                      <div className="mt-1 space-y-0.5">
+                        {item.values.map((value, i) => {
+                          const href = item.hrefs?.[i];
+                          return href ? (
+                            <a
+                              key={value}
+                              href={href}
+                              className="block font-medium text-forest-800 transition-colors hover:text-gold-600"
+                            >
+                              {value}
+                            </a>
+                          ) : (
+                            <div
+                              key={value}
+                              className="font-medium text-forest-800"
+                            >
+                              {value}
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
                   </div>
@@ -220,7 +250,7 @@ export default function ContactPage() {
                     id="phone"
                     name="phone"
                     type="tel"
-                    placeholder="+1 (000) 000-0000"
+                    placeholder="(+234) 802 368 8218"
                     className="contact-input"
                   />
                 </Field>

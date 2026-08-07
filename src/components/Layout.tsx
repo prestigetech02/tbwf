@@ -20,7 +20,7 @@ export default function Layout() {
   }, [pathname, hash]);
 
   return (
-    <div className="min-h-screen bg-cream-100">
+    <div className="min-h-screen overflow-x-hidden bg-cream-100">
       <Header />
       <main>
         <Outlet />

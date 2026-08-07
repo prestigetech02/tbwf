@@ -1,8 +1,7 @@
 import { Quote } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 
-const aboutImg =
-  'https://images.pexels.com/photos/7951740/pexels-photo-7951740.jpeg?auto=compress&cs=tinysrgb&h=900&w=1200';
+const aboutImg = '/images/about.png';
 
 export default function About() {
   const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.2 });
@@ -22,17 +21,17 @@ export default function About() {
               inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
             }`}
           >
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl ring-1 ring-gold-400/20">
+            <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl ring-1 ring-gold-400/20">
               <img
                 src={aboutImg}
-                alt="Group of women standing together in unity"
-                className="aspect-[4/3] w-full object-cover"
+                alt="Victorious Praying Women Ministry speaker on stage"
+                className="aspect-[4/3] w-full object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest-950/50 to-transparent" />
             </div>
-            {/* floating badge */}
-            <div className="absolute -bottom-6 -right-4 sm:-right-6 flex items-center gap-3 rounded-2xl bg-cream-50 px-5 py-4 shadow-xl ring-1 ring-forest-100">
-              <span className="font-serif text-3xl font-bold text-forest-800">VPWM</span>
+            {/* floating badge — inset on mobile to avoid clipping */}
+            <div className="absolute bottom-3 left-3 right-3 sm:bottom-auto sm:-bottom-6 sm:left-auto sm:-right-4 lg:-right-6 flex items-center gap-3 rounded-2xl bg-cream-50 px-4 py-3 sm:px-5 sm:py-4 ring-1 ring-forest-100">
+              <span className="font-serif text-2xl sm:text-3xl font-bold text-forest-800">VPWM</span>
               <span className="text-xs leading-tight font-medium text-forest-600">
                 Victorious Praying
                 <br />
@@ -63,7 +62,6 @@ export default function About() {
                 businesses that bless their families, communities, and the
                 Kingdom.
               </p>
-
             </div>
 
             {/* Callout quote */}

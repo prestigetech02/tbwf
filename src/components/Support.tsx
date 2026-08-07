@@ -25,7 +25,7 @@ export default function Support() {
         </div>
 
         {/* Tiers */}
-        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+        <div className="mt-16 grid gap-6 pt-2 lg:grid-cols-3 lg:pt-0">
           {givingTiers.map((tier, i) => (
             <TierCard key={tier.name} tier={tier} index={i} />
           ))}
@@ -62,15 +62,15 @@ function TierCard({
   return (
     <div
       ref={ref}
-      className={`relative flex flex-col rounded-2xl p-7 transition-all duration-700 ${
+      className={`relative flex flex-col rounded-2xl p-6 sm:p-7 transition-all duration-700 ${
         featured
-          ? 'bg-cream-50 shadow-2xl ring-2 ring-gold-400 lg:-translate-y-4'
+          ? 'bg-cream-50 ring-2 ring-gold-400 lg:-translate-y-4'
           : 'bg-forest-900/70 ring-1 ring-forest-700 backdrop-blur-sm'
       } ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
       style={{ transitionDelay: `${index * 120}ms` }}
     >
       {featured && (
-        <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold-400 px-4 py-1 text-xs font-bold uppercase tracking-wider text-forest-900 shadow-md">
+        <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold-400 px-4 py-1 text-xs font-bold uppercase tracking-wider text-forest-900">
           Most Impactful
         </span>
       )}
@@ -97,7 +97,7 @@ function TierCard({
       </p>
       <Link
         to="/contact"
-        className={`mt-7 inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
+        className={`mt-7 inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
           featured
             ? 'bg-forest-700 text-cream-50 hover:bg-forest-600'
             : 'bg-gold-400 text-forest-900 hover:bg-gold-300'

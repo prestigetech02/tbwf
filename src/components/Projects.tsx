@@ -112,7 +112,7 @@ export default function Projects() {
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-forest-800 transition-colors hover:text-gold-600"
+                    className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-forest-800 transition-colors hover:text-gold-600"
                   >
                     Read more
                     <ExternalLink className="h-3.5 w-3.5" />
@@ -120,7 +120,7 @@ export default function Projects() {
                 ) : (
                   <Link
                     to={project.href}
-                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-forest-800 transition-colors hover:text-gold-600"
+                    className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-forest-800 transition-colors hover:text-gold-600"
                   >
                     Read more
                     <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />

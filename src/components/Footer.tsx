@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Globe, MessageCircle, Share2, Heart } from 'lucide-react';
+import { Globe, MessageCircle, Share2 } from 'lucide-react';
 import { navLinks } from '@/data';
 
 const socials = [
@@ -81,9 +81,31 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="mt-5 space-y-3 text-sm text-forest-600">
-              <li>VPWM Center, Faith District</li>
-              <li>+1 (000) 000-0000</li>
-              <li>hello@tbwf.org</li>
+              <li>38 Opebi Road, Ikeja, Lagos, Nigeria</li>
+              <li>
+                <a
+                  href="tel:+2348023688218"
+                  className="transition-colors hover:text-gold-600"
+                >
+                  (+234) 802 368 8218
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:contact@tbwfelim.com"
+                  className="transition-colors hover:text-gold-600"
+                >
+                  contact@tbwfelim.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:info@tbwfelim.com"
+                  className="transition-colors hover:text-gold-600"
+                >
+                  info@tbwfelim.com
+                </a>
+              </li>
             </ul>
             <Link
               to="/contact"
@@ -100,9 +122,16 @@ export default function Footer() {
             © {new Date().getFullYear()} Thriving Business Women Fellowship. All
             rights reserved.
           </p>
-          <p className="inline-flex items-center gap-1.5 text-xs text-forest-500">
-            Built with <Heart className="h-3.5 w-3.5 text-gold-500" /> for the
-            Kingdom
+          <p className="text-xs text-forest-500">
+            Built by{' '}
+            <a
+              href="https://techyx360.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-forest-700 transition-colors hover:text-gold-600"
+            >
+              TechyX360
+            </a>
           </p>
         </div>
       </div>

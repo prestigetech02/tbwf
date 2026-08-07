@@ -50,6 +50,24 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+
+  useEffect(() => {
+    const onResize = () => {
+      if (window.matchMedia('(min-width: 1024px)').matches) {
+        setOpen(false);
+        setMobileExpanded(null);
+      }
+    };
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
   const closeMobile = () => {
     setOpen(false);
     setMobileExpanded(null);
@@ -61,21 +79,21 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 pt-[env(safe-area-inset-top)] ${
         scrolled
           ? 'bg-cream-50/97 backdrop-blur-md shadow-[0_2px_24px_rgba(16,42,28,0.10)]'
           : 'bg-forest-950/30 backdrop-blur-sm'
       }`}
     >
-      <nav className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="flex h-20 items-center justify-between">
+      <nav className="mx-auto max-w-7xl px-4 sm:px-8">
+        <div className="flex h-16 sm:h-20 items-center justify-between gap-3">
 
           {/* Brand */}
-          <Link to="/" className="flex items-center group">
+          <Link to="/" className="flex min-w-0 items-center group" onClick={closeMobile}>
             <img
               src="/images/logo.png"
               alt="TBWF — Thriving Business Women Fellowship"
-              className="h-12 w-auto transition-transform group-hover:scale-105"
+              className="h-8 w-auto max-w-[9.5rem] object-contain object-left sm:h-11 sm:max-w-none transition-transform group-hover:scale-105"
             />
           </Link>
 
@@ -113,7 +131,7 @@ export default function Header() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setOpen((v) => !v)}
-            className={`lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg transition-colors ${
+            className={`lg:hidden inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg transition-colors ${
               scrolled
                 ? 'text-forest-800 hover:bg-forest-100'
                 : 'text-cream-50 hover:bg-white/15'
@@ -128,10 +146,10 @@ export default function Header() {
         {/* Mobile menu panel */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            open ? 'max-h-[40rem] pb-5' : 'max-h-0'
+            open ? 'max-h-[min(85dvh,42rem)] pb-5' : 'max-h-0'
           }`}
         >
-          <ul className="flex flex-col gap-1 rounded-2xl bg-forest-950/95 p-4 shadow-2xl ring-1 ring-gold-400/20 backdrop-blur-md">
+          <ul className="flex max-h-[min(78dvh,38rem)] flex-col gap-1 overflow-y-auto overscroll-contain rounded-2xl bg-forest-950/95 p-3 sm:p-4 shadow-2xl ring-1 ring-gold-400/20 backdrop-blur-md">
             {navLinks.map((link) =>
               link.children ? (
                 <li key={link.label}>
@@ -142,12 +160,12 @@ export default function Header() {
                         prev === link.label ? null : link.label
                       )
                     }
-                    className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-base font-semibold text-cream-50 hover:bg-forest-800/70 hover:text-gold-300 transition-colors"
+                    className="flex min-h-12 w-full items-center justify-between rounded-xl px-4 py-3 text-left text-base font-semibold text-cream-50 hover:bg-forest-800/70 hover:text-gold-300 transition-colors"
                     aria-expanded={mobileExpanded === link.label}
                   >
                     {link.label}
                     <ChevronDown
-                      className={`h-4 w-4 transition-transform ${
+                      className={`h-4 w-4 shrink-0 transition-transform ${
                         mobileExpanded === link.label ? 'rotate-180' : ''
                       }`}
                     />
@@ -155,7 +173,7 @@ export default function Header() {
                   <ul
                     className={`overflow-hidden transition-all duration-300 ${
                       mobileExpanded === link.label
-                        ? 'max-h-80 opacity-100'
+                        ? 'max-h-96 opacity-100'
                         : 'max-h-0 opacity-0'
                     }`}
                   >
@@ -164,7 +182,7 @@ export default function Header() {
                         <NavItemLink
                           href={child.href}
                           onClick={closeMobile}
-                          className="block rounded-xl py-2.5 pl-8 pr-4 text-sm font-medium text-cream-300 hover:bg-forest-800/70 hover:text-gold-300 transition-colors"
+                          className="block rounded-xl py-3 pl-8 pr-4 text-sm font-medium leading-snug text-cream-300 hover:bg-forest-800/70 hover:text-gold-300 transition-colors"
                         >
                           {child.label}
                         </NavItemLink>
@@ -177,7 +195,7 @@ export default function Header() {
                   <NavItemLink
                     href={link.href!}
                     onClick={closeMobile}
-                    className="block rounded-xl px-4 py-3 text-base font-semibold text-cream-50 hover:bg-forest-800/70 hover:text-gold-300 transition-colors"
+                    className="flex min-h-12 items-center rounded-xl px-4 py-3 text-base font-semibold text-cream-50 hover:bg-forest-800/70 hover:text-gold-300 transition-colors"
                   >
                     {link.label}
                   </NavItemLink>
@@ -188,7 +206,7 @@ export default function Header() {
               <Link
                 to="/#support"
                 onClick={closeMobile}
-                className="block rounded-xl bg-gold-400 px-4 py-3 text-center text-base font-semibold text-forest-900 transition-colors hover:bg-gold-300"
+                className="flex min-h-12 items-center justify-center rounded-xl bg-gold-400 px-4 py-3 text-center text-base font-semibold text-forest-900 transition-colors hover:bg-gold-300"
               >
                 Partner With Us
               </Link>

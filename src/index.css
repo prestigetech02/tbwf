@@ -36,12 +36,18 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   font-family: var(--font-sans);
   background-color: var(--color-cream-100);
   color: var(--color-forest-950);
+  overflow-x: hidden;
+}
+
+#root {
+  overflow-x: hidden;
 }
 
 ::selection {
