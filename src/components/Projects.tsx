@@ -8,8 +8,7 @@ const projects = [
     subtitle: 'Thriving Enterprise Development Center',
     description:
       'Business incubation, mentoring, and enterprise support for women building sustainable marketplace ventures.',
-    image:
-      'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&h=700&w=1000',
+    image: '/images/tedc-card.png',
     href: 'https://tedc.com.ng',
     external: true,
   },

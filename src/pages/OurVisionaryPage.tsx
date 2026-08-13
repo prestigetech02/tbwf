@@ -7,11 +7,11 @@ import {
   Users,
 } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
+import { GiveNowButton } from '@/components/GiveModal';
 
 const founderImg = '/images/founder.png';
 
-const heroImg =
-  'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&h=900&w=1400';
+const heroImg = '/images/about.png';
 
 const elimPillars = [
   {
@@ -55,9 +55,8 @@ function PageHero() {
       <div className="absolute inset-0">
         <img
           src={heroImg}
-          alt=""
-          className="h-full w-full object-cover object-center"
-          aria-hidden
+          alt="Victorious Praying Women Ministry gathering"
+          className="h-full w-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-forest-800/55" />
         <div className="absolute inset-0 bg-gradient-to-br from-forest-950/92 via-forest-900/78 to-forest-700/55" />
@@ -104,17 +103,17 @@ function IntroPortrait() {
               <div className="overflow-hidden rounded-2xl ring-1 ring-forest-100">
                 <img
                   src={founderImg}
-                  alt="Pastor Funmilola Ifebogun, Senior Associate Pastor of Victorious Praying Women Ministry"
+                  alt="Pastor Mayokun Oreofe, Chief Servant of Victorious Praying Women Ministry"
                   className="aspect-[4/5] w-full object-cover object-top"
                 />
               </div>
               <div className="absolute inset-x-4 bottom-4 sm:inset-x-5 sm:bottom-5">
                 <div className="rounded-xl bg-cream-50 px-5 py-4 ring-1 ring-forest-100">
                   <p className="font-serif text-lg sm:text-xl font-bold text-forest-900 leading-snug">
-                    Pastor Funmilola Ifebogun
+                    Pastor Mayokun Oreofe
                   </p>
                   <p className="mt-1 text-sm text-forest-600">
-                    Senior Associate Pastor
+                    Chief Servant
                   </p>
                   <p className="text-sm text-forest-600">
                     Victorious Praying Women Ministry
@@ -314,13 +313,10 @@ function Invitation() {
         </div>
 
         <div className="mt-10 flex flex-wrap items-center gap-4">
-          <Link
-            to="/#support"
-            className="inline-flex items-center gap-2 rounded-full bg-gold-400 px-7 py-3.5 text-sm font-semibold text-forest-900 transition-all hover:bg-gold-300 hover:-translate-y-0.5"
-          >
+          <GiveNowButton className="inline-flex items-center gap-2 rounded-full bg-gold-400 px-7 py-3.5 text-sm font-semibold text-forest-900 transition-all hover:bg-gold-300 hover:-translate-y-0.5">
             Partner With Us
             <ArrowRight className="h-4 w-4" />
-          </Link>
+          </GiveNowButton>
           <Link
             to="/contact"
             className="inline-flex items-center rounded-full px-6 py-3.5 text-sm font-semibold text-forest-800 ring-1 ring-forest-200 transition-colors hover:bg-forest-50 hover:ring-forest-300"
@@ -358,10 +354,10 @@ function Closing() {
         </p>
         <div className="mt-10">
           <p className="font-serif text-lg font-semibold text-cream-50">
-            Pastor Funmilola Ifebogun
+            Pastor Mayokun Oreofe
           </p>
           <p className="mt-1 text-sm text-cream-300">
-            Senior Associate Pastor
+            Chief Servant
           </p>
           <p className="text-sm text-cream-400">
             Victorious Praying Women Ministry

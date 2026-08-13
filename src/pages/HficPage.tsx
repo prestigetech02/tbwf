@@ -10,6 +10,7 @@ import {
   MapPin,
 } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
+import { GiveNowButton } from '@/components/GiveModal';
 
 const hfic = {
   hero: '/images/hfic/_DSC7284.JPG',
@@ -393,13 +394,10 @@ function ElimConnection() {
             </div>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Link
-                to="/#support"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gold-400 px-7 py-3.5 text-sm font-semibold text-forest-900 transition-all hover:bg-gold-300 hover:-translate-y-0.5"
-              >
+              <GiveNowButton className="inline-flex items-center justify-center gap-2 rounded-full bg-gold-400 px-7 py-3.5 text-sm font-semibold text-forest-900 transition-all hover:bg-gold-300 hover:-translate-y-0.5">
                 Donate Towards The Elim Empowerment Centre
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </GiveNowButton>
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold text-forest-800 ring-1 ring-forest-200 transition-colors hover:bg-forest-50 hover:ring-forest-300"

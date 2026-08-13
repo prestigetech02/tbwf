@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Check, Mail } from 'lucide-react';
 import { givingTiers } from '@/data';
 import { useInView } from '@/hooks/useInView';
+import { useGiveModal } from '@/components/GiveModal';
 
 export default function Support() {
   return (
@@ -57,6 +58,7 @@ function TierCard({
   index: number;
 }) {
   const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.2 });
+  const { openGiveModal } = useGiveModal();
   const featured = tier.featured;
 
   return (
@@ -95,8 +97,9 @@ function TierCard({
       >
         {tier.description}
       </p>
-      <Link
-        to="/contact"
+      <button
+        type="button"
+        onClick={openGiveModal}
         className={`mt-7 inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all ${
           featured
             ? 'bg-forest-700 text-cream-50 hover:bg-forest-600'
@@ -105,7 +108,7 @@ function TierCard({
       >
         <Check className="h-4 w-4" />
         Give Now
-      </Link>
+      </button>
     </div>
   );
 }

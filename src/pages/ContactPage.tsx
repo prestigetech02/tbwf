@@ -9,8 +9,8 @@ import {
   Users,
   MessageCircle,
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { useInView } from '@/hooks/useInView';
+import { GiveNowButton } from '@/components/GiveModal';
 
 const contactInfo = [
   {
@@ -199,13 +199,10 @@ export default function ContactPage() {
                   Explore giving tiers and ways to fuel fellowships, training,
                   and the Center Building Project.
                 </p>
-                <Link
-                  to="/#support"
-                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-gold-400 px-5 py-2.5 text-sm font-semibold text-forest-900 transition-all hover:bg-gold-300 hover:-translate-y-0.5"
-                >
+                <GiveNowButton className="mt-5 inline-flex items-center gap-2 rounded-full bg-gold-400 px-5 py-2.5 text-sm font-semibold text-forest-900 transition-all hover:bg-gold-300 hover:-translate-y-0.5">
                   <HandHeart className="h-4 w-4" />
-                  View Support Options
-                </Link>
+                  Give Now
+                </GiveNowButton>
               </div>
             </div>
 

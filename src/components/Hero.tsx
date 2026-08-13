@@ -34,7 +34,7 @@ export default function Hero() {
             <span
               className="inline-flex items-center gap-2 rounded-full bg-gold-400/15 px-4 py-1.5 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-gold-200 ring-1 ring-gold-400/30 animate-fade-up"
             >
-              A ministry of VPWM
+              A platform under VPWM
             </span>
 
             {/* Headline */}

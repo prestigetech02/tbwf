@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { navLinks, type NavChild, type NavLink } from '@/data';
+import { GiveNowButton } from '@/components/GiveModal';
 
 function isExternal(href: string) {
   return /^https?:\/\//i.test(href);
@@ -121,12 +122,9 @@ export default function Header() {
           </ul>
 
           {/* Desktop CTA */}
-          <Link
-            to="/#support"
-            className="hidden lg:inline-flex items-center rounded-full bg-gold-400 px-6 py-2.5 text-sm font-semibold text-forest-900 shadow-md ring-1 ring-gold-500/40 transition-all hover:bg-gold-300 hover:shadow-lg hover:-translate-y-0.5"
-          >
+          <GiveNowButton className="hidden lg:inline-flex items-center rounded-full bg-gold-400 px-6 py-2.5 text-sm font-semibold text-forest-900 shadow-md ring-1 ring-gold-500/40 transition-all hover:bg-gold-300 hover:shadow-lg hover:-translate-y-0.5">
             Partner With Us
-          </Link>
+          </GiveNowButton>
 
           {/* Mobile hamburger */}
           <button
@@ -203,13 +201,12 @@ export default function Header() {
               )
             )}
             <li className="mt-2">
-              <Link
-                to="/#support"
+              <GiveNowButton
                 onClick={closeMobile}
-                className="flex min-h-12 items-center justify-center rounded-xl bg-gold-400 px-4 py-3 text-center text-base font-semibold text-forest-900 transition-colors hover:bg-gold-300"
+                className="flex min-h-12 w-full items-center justify-center rounded-xl bg-gold-400 px-4 py-3 text-center text-base font-semibold text-forest-900 transition-colors hover:bg-gold-300"
               >
                 Partner With Us
-              </Link>
+              </GiveNowButton>
             </li>
           </ul>
         </div>

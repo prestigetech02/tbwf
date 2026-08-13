@@ -11,12 +11,11 @@ import {
   ArrowRight,
 } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
+import { GiveNowButton } from '@/components/GiveModal';
 
-const heroImg =
-  'https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&h=900&w=1400';
+const heroImg = '/images/about.png';
 
-const identityImg =
-  'https://images.pexels.com/photos/7951740/pexels-photo-7951740.jpeg?auto=compress&cs=tinysrgb&h=900&w=1200';
+const identityImg = '/images/pic2.jpg';
 
 const coreValues = [
   {
@@ -70,8 +69,8 @@ function PageHero() {
       <div className="absolute inset-0">
         <img
           src={heroImg}
-          alt="Women gathered in prayer and fellowship"
-          className="h-full w-full object-cover object-center"
+          alt="Victorious Praying Women Ministry gathering"
+          className="h-full w-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-forest-800/55" />
         <div className="absolute inset-0 bg-gradient-to-br from-forest-950/92 via-forest-900/78 to-forest-700/55" />
@@ -119,7 +118,7 @@ function CoreIdentity() {
             <div className="relative overflow-hidden rounded-3xl shadow-xl ring-1 ring-forest-100">
               <img
                 src={identityImg}
-                alt="Women of Victorious Praying Women Ministry standing in unity"
+                alt="Women of TBWF and VPWM gathered in fellowship"
                 className="aspect-[4/3] w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest-950/40 to-transparent" />
@@ -345,13 +344,10 @@ function ElimSpotlight() {
               gain financial independence, youth receive digital skills, and
               leaders are raised to influence society with integrity.
             </p>
-            <Link
-              to="/#support"
-              className="inline-flex items-center gap-2 rounded-full bg-gold-400 px-7 py-3.5 text-sm font-semibold text-forest-900 shadow-md ring-1 ring-gold-500/40 transition-all hover:bg-gold-300 hover:shadow-lg hover:-translate-y-0.5"
-            >
+            <GiveNowButton className="inline-flex items-center gap-2 rounded-full bg-gold-400 px-7 py-3.5 text-sm font-semibold text-forest-900 shadow-md ring-1 ring-gold-500/40 transition-all hover:bg-gold-300 hover:shadow-lg hover:-translate-y-0.5">
               Donate Towards The Elim Project
               <ArrowRight className="h-4 w-4" />
-            </Link>
+            </GiveNowButton>
             <Link
               to="/contact"
               className="text-sm font-semibold text-forest-700 underline-offset-4 hover:text-gold-600 hover:underline transition-colors"

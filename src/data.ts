@@ -42,7 +42,7 @@ export const navLinks: NavLink[] = [
       },
     ],
   },
-  { label: 'The Elim Centre', href: '/#support' },
+  { label: 'The Elim Centre', href: '/elim-centre' },
   { label: 'Contact Us', href: '/contact' },
 ];
 

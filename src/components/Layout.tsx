@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { GiveModalProvider } from '@/components/GiveModal';
 
 export default function Layout() {
   const { pathname, hash } = useLocation();
@@ -20,12 +21,14 @@ export default function Layout() {
   }, [pathname, hash]);
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-cream-100">
-      <Header />
-      <main>
-        <Outlet />
-      </main>
-      <Footer />
-    </div>
+    <GiveModalProvider>
+      <div className="min-h-screen overflow-x-hidden bg-cream-100">
+        <Header />
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </GiveModalProvider>
   );
 }

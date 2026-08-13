@@ -10,6 +10,7 @@ import {
   TrendingUp,
 } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
+import { GiveNowButton } from '@/components/GiveModal';
 
 const heroImg = '/images/summit-hero.png';
 
@@ -280,13 +281,10 @@ function PartnerCta() {
           </div>
 
           <div className="flex flex-col items-start gap-4 rounded-2xl bg-white p-8 ring-1 ring-forest-100">
-            <Link
-              to="/#support"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold-400 px-7 py-3.5 text-sm font-semibold text-forest-900 transition-all hover:bg-gold-300 hover:-translate-y-0.5"
-            >
+            <GiveNowButton className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold-400 px-7 py-3.5 text-sm font-semibold text-forest-900 transition-all hover:bg-gold-300 hover:-translate-y-0.5">
               Donate Towards The Elim Empowerment Centre
               <ArrowRight className="h-4 w-4" />
-            </Link>
+            </GiveNowButton>
             <Link
               to="/contact"
               className="inline-flex w-full items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold text-forest-800 ring-1 ring-forest-200 transition-colors hover:bg-forest-50 hover:ring-forest-300"

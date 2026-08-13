@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Globe, MessageCircle, Share2 } from 'lucide-react';
 import { navLinks } from '@/data';
+import { GiveNowButton } from '@/components/GiveModal';
 
 const socials = [
   { icon: Globe, label: 'Facebook', href: '#' },
@@ -65,12 +66,9 @@ export default function Footer() {
                 </li>
               ))}
               <li>
-                <Link
-                  to="/#support"
-                  className="text-sm text-forest-600 transition-colors hover:text-gold-600"
-                >
+                <GiveNowButton className="text-sm text-forest-600 transition-colors hover:text-gold-600">
                   Support Us
-                </Link>
+                </GiveNowButton>
               </li>
             </ul>
           </div>

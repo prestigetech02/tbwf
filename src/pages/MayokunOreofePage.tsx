@@ -2,19 +2,18 @@ import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   Crown,
-  HandHeart,
   Shield,
   BookOpen,
   Users,
   HeartHandshake,
 } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
+import { GiveNowButton } from '@/components/GiveModal';
 
 const moi = {
   hero: '/images/moi/IMG-20211123-WA0038.jpg',
   overview: '/images/moi/IMG-20211123-WA0042.jpg',
   esther: '/images/moi/IMG-20211123-WA0077.jpg',
-  outreach: '/images/moi/IMG-20211226-WA0008.jpg',
   leadership: '/images/moi/IMG-20211123-WA0066.jpg',
   impact1: '/images/moi/IMG-20211123-WA0050.jpg',
   impact2: '/images/moi/IMG-20211123-WA0074.jpg',
@@ -30,14 +29,6 @@ const pillars = [
     imageAlt: 'Young woman engaged in an MOI discipleship and leadership gathering',
     description:
       'A vibrant discipleship, mentorship, and leadership arm specifically designed for young women. Esther Tribe focuses on building character, spiritual depth, self-worth, and leadership capacity, raising a generation of confident, purpose-driven women of influence.',
-  },
-  {
-    icon: HandHeart,
-    title: 'Familusi Olukemi Elim Outreach',
-    image: moi.outreach,
-    imageAlt: 'MOI volunteers during Jesus in the Village community outreach',
-    description:
-      'A strategic arm within MOI focused on community restoration, compassionate outreach, and family strengthening—bringing hope, practical aid, and godly guidance to vulnerable communities.',
   },
   {
     icon: Shield,
@@ -204,7 +195,7 @@ function KeyPillars() {
 
         <div
           ref={ref}
-          className={`mt-12 grid gap-5 lg:grid-cols-3 transition-all duration-700 ${
+          className={`mt-12 grid gap-5 sm:grid-cols-2 transition-all duration-700 ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
@@ -378,13 +369,10 @@ function ElimConnection() {
             </div>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Link
-                to="/#support"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gold-400 px-7 py-3.5 text-sm font-semibold text-forest-900 transition-all hover:bg-gold-300 hover:-translate-y-0.5"
-              >
+              <GiveNowButton className="inline-flex items-center justify-center gap-2 rounded-full bg-gold-400 px-7 py-3.5 text-sm font-semibold text-forest-900 transition-all hover:bg-gold-300 hover:-translate-y-0.5">
                 Donate Towards The Elim Empowerment Centre
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </GiveNowButton>
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold text-forest-800 ring-1 ring-forest-200 transition-colors hover:bg-forest-50 hover:ring-forest-300"
