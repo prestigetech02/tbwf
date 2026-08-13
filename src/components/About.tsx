@@ -1,7 +1,7 @@
 import { Quote } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 
-const aboutImg = '/images/about.png';
+const aboutImg = '/images/pic.jpeg';
 
 export default function About() {
   const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.2 });
@@ -24,7 +24,7 @@ export default function About() {
             <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl ring-1 ring-gold-400/20">
               <img
                 src={aboutImg}
-                alt="Victorious Praying Women Ministry speaker on stage"
+                alt="TBWF leader speaking at a vision and impact gathering"
                 className="aspect-[4/3] w-full object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest-950/50 to-transparent" />

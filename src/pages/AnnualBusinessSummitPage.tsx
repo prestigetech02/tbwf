@@ -11,8 +11,7 @@ import {
 } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 
-const heroImg =
-  'https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&h=900&w=1400';
+const heroImg = '/images/summit-hero.png';
 
 const pillars = [
   {
@@ -80,8 +79,8 @@ function PageHero() {
       <div className="absolute inset-0">
         <img
           src={heroImg}
-          alt="Women gathered at a professional business summit"
-          className="h-full w-full object-cover object-center"
+          alt="Delegates gathered at the TBWF Annual Business Summit"
+          className="h-full w-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-forest-800/55" />
         <div className="absolute inset-0 bg-gradient-to-br from-forest-950/92 via-forest-900/78 to-forest-700/55" />

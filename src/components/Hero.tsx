@@ -1,6 +1,6 @@
 import { ArrowRight, HandHeart } from 'lucide-react';
 
-const heroImg = '/images/hero.png';
+const heroImg = '/images/pic2.jpg';
 
 export default function Hero() {
   return (
@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           src={heroImg}
-          alt="TBWF leaders and partners at a celebration gathering"
+          alt="Women gathered in fellowship at a TBWF event"
           className="h-full w-full object-cover object-[center_top]"
         />
         {/* Mobile: stronger even overlay for text contrast */}

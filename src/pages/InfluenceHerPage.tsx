@@ -12,8 +12,7 @@ import {
 } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 
-const heroImg =
-  'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&h=900&w=1400';
+const heroImg = '/images/influenceher-hero.png';
 
 const objectives = [
   {
@@ -87,7 +86,7 @@ function PageHero() {
       <div className="absolute inset-0">
         <img
           src={heroImg}
-          alt="Women leaders collaborating at a conference"
+          alt="InfluenceHER conference attendees during a fellowship meal"
           className="h-full w-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-forest-800/55" />

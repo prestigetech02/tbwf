@@ -18,8 +18,7 @@ const projects = [
     subtitle: 'Marketplace Excellence & Kingdom Impact',
     description:
       'A premier gathering of entrepreneurs, professionals, and emerging leaders for faith, strategy, and growth.',
-    image:
-      'https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&h=700&w=1000',
+    image: '/images/summit-hero.png',
     href: '/annual-business-summit',
   },
   {
@@ -27,8 +26,7 @@ const projects = [
     subtitle: 'Conference & Institute',
     description:
       'Raising women of influence, purpose, and market capacity to transform society through leadership and enterprise.',
-    image:
-      'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&h=700&w=1000',
+    image: '/images/influenceher-card.png',
     href: '/influenceher',
   },
   {
