@@ -1,81 +1,74 @@
-import { ArrowRight, HandHeart } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { GiveNowButton } from '@/components/GiveModal';
 
-const heroImg = '/images/pic2.jpg';
+const heroImg = '/images/elim-centre.png';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-[100svh] overflow-hidden">
-      {/* Full-bleed background */}
-      <div className="absolute inset-0">
-        <img
-          src={heroImg}
-          alt="Women gathered in fellowship at a TBWF event"
-          className="h-full w-full object-cover object-[center_top]"
-        />
-        {/* Mobile: stronger even overlay for text contrast */}
-        <div className="absolute inset-0 bg-forest-950/72 md:hidden" />
-        <div className="absolute inset-0 bg-gradient-to-t from-forest-950/55 via-transparent to-forest-950/30 md:hidden" />
-        {/* Desktop+: darker on the left, clearer photo on the right */}
-        <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-forest-950/88 via-forest-900/55 to-forest-900/15" />
-        <div className="absolute inset-0 hidden md:block bg-gradient-to-t from-forest-950/50 via-transparent to-forest-950/25" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_30%,rgba(212,175,55,0.1),transparent_55%)]" />
-      </div>
+    <section
+      id="home"
+      className="relative min-h-[100svh] overflow-hidden bg-forest-950"
+    >
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,rgba(212,175,55,0.08),transparent_50%)]" />
+      <div className="pointer-events-none absolute right-0 top-24 hidden h-96 w-96 rounded-full bg-gold-400/8 blur-3xl animate-float-slow lg:block" />
 
-      {/* Decorative blobs — desktop only to avoid noise on small screens */}
-      <div className="pointer-events-none absolute right-0 top-24 hidden h-96 w-96 rounded-full bg-gold-400/8 blur-3xl animate-float-slow sm:block" />
-      <div className="pointer-events-none absolute left-0 bottom-0 hidden h-64 w-64 rounded-full bg-forest-400/10 blur-3xl sm:block" />
-
-      {/* Content — full height, padded below header */}
       <div className="relative flex min-h-[100svh] items-center pt-24 pb-16 sm:pt-28">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-10 lg:px-16">
-          <div className="max-w-2xl">
-
-            {/* Badge */}
-            <span
-              className="inline-flex items-center gap-2 rounded-full bg-gold-400/15 px-4 py-1.5 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-gold-200 ring-1 ring-gold-400/30 animate-fade-up"
-            >
-              A platform under VPWM
+        <div className="mx-auto grid w-full max-w-7xl items-center gap-10 px-4 sm:px-10 lg:grid-cols-[13fr_7fr] lg:gap-12 lg:px-16">
+          {/* Text — 65% */}
+          <div className="max-w-2xl lg:max-w-none">
+            <span className="inline-flex items-center gap-2 rounded-full bg-gold-400/15 px-4 py-1.5 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-gold-200 ring-1 ring-gold-400/30 animate-fade-up">
+              The Building Project
             </span>
 
-            {/* Headline */}
             <h1
-              className="mt-6 sm:mt-7 font-serif text-[2rem] leading-[1.12] sm:text-5xl lg:text-[3.6rem] font-bold sm:leading-[1.07] text-cream-50 animate-fade-up"
+              className="mt-6 sm:mt-7 font-serif text-[2rem] leading-[1.12] sm:text-5xl lg:text-[3.25rem] font-bold sm:leading-[1.07] text-cream-50 animate-fade-up"
               style={{ animationDelay: '0.1s' }}
             >
-              Building Kingdom-Minded Entrepreneurs
+              A permanent home where faith meets action
             </h1>
 
-            {/* Subheadline */}
             <p
               className="mt-5 sm:mt-6 text-base sm:text-lg leading-relaxed text-cream-200 animate-fade-up"
               style={{ animationDelay: '0.2s' }}
             >
-              Equipping women to build thriving businesses, discover
-              God-given potential, and become kingdom influencers through
-              faith, enterprise, and purpose.
+              Join us to build the Elim Empowerment Centre, a dedicated hub
+              for mentorship, business incubation, skills training, and
+              community restoration across generations.
             </p>
 
-            {/* CTAs */}
             <div
               className="mt-8 sm:mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap animate-fade-up"
               style={{ animationDelay: '0.3s' }}
             >
-              <a
-                href="#projects"
-                className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-gold-400 px-7 py-3.5 text-sm font-semibold text-forest-900 shadow-lg ring-1 ring-gold-500/40 transition-all hover:bg-gold-300 hover:shadow-xl hover:-translate-y-0.5"
-              >
-                Explore Projects
+              <GiveNowButton className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-gold-400 px-7 py-3.5 text-sm font-semibold text-forest-900 shadow-lg ring-1 ring-gold-500/40 transition-all hover:bg-gold-300 hover:shadow-xl hover:-translate-y-0.5">
+                Donate Now
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
-              <a
-                href="#support"
+              </GiveNowButton>
+              <Link
+                to="/elim-centre"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white/10 px-7 py-3.5 text-sm font-semibold text-cream-50 ring-1 ring-white/25 backdrop-blur-sm transition-all hover:bg-white/18 hover:ring-white/50"
               >
-                <HandHeart className="h-4 w-4" />
-                Get Involved
-              </a>
+                Learn More
+              </Link>
             </div>
+          </div>
 
+          {/* Image — 35% */}
+          <div
+            className="animate-fade-up w-full lg:max-w-none"
+            style={{ animationDelay: '0.15s' }}
+          >
+            <div className="overflow-hidden rounded-2xl ring-1 ring-white/15 shadow-2xl shadow-forest-950/50">
+              <img
+                src={heroImg}
+                alt="Proposed view of the Elim Empowerment Centre"
+                className="aspect-[4/3] w-full object-cover object-center lg:aspect-auto lg:min-h-[22rem] lg:max-h-[28rem]"
+              />
+            </div>
+            <p className="mt-3 text-center text-[10px] font-medium uppercase tracking-[0.16em] text-cream-300/70 sm:text-xs lg:text-right">
+              Proposed view of the Elim Empowerment Centre
+            </p>
           </div>
         </div>
       </div>

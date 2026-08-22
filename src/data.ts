@@ -30,7 +30,7 @@ export const navLinks: NavLink[] = [
     ],
   },
   {
-    label: 'Our Projects',
+    label: 'Initiatives',
     children: [
       { label: 'TEDC', href: 'https://tedc.com.ng' },
       { label: 'Annual Business Summit', href: '/annual-business-summit' },
@@ -63,7 +63,7 @@ export const pillars: Pillar[] = [
     icon: Briefcase,
     title: 'Business Training',
     description:
-      'Practical entrepreneurship development and strategy — from idea to income — taught by marketplace leaders.',
+      'Practical entrepreneurship development and strategy, from idea to income, taught by marketplace leaders.',
   },
   {
     icon: HeartHandshake,

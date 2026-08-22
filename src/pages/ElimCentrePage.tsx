@@ -24,18 +24,33 @@ export default function ElimCentrePage() {
 
 function PageHero() {
   return (
-    <section className="relative overflow-hidden bg-cream-100 pt-32 pb-8 sm:pt-36 sm:pb-10">
-      <div className="mx-auto max-w-3xl px-5 sm:px-8 text-center">
-        <span className="inline-flex items-center gap-2 rounded-full bg-gold-400/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold-700 ring-1 ring-gold-400/30">
-          The Building Project
-        </span>
-        <h1 className="mt-6 font-serif text-4xl sm:text-5xl font-bold leading-tight text-forest-900">
-          Elim Empowerment Centre
-        </h1>
-        <p className="mt-5 text-base sm:text-lg leading-relaxed text-forest-700">
-          A permanent home where faith meets action - raising women, youth, and
-          leaders through enterprise, skills, and community restoration.
-        </p>
+    <section className="relative overflow-hidden bg-cream-100 pt-32 pb-12 sm:pt-36 sm:pb-16">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-2 lg:gap-14">
+        <div className="max-w-xl">
+          <span className="inline-flex items-center gap-2 rounded-full bg-gold-400/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold-700 ring-1 ring-gold-400/30">
+            The Building Project
+          </span>
+          <h1 className="mt-6 font-serif text-4xl sm:text-5xl font-bold leading-tight text-forest-900">
+            Elim Empowerment Centre
+          </h1>
+          <p className="mt-5 text-base sm:text-lg leading-relaxed text-forest-700">
+            A permanent home where faith meets action - raising women, youth, and
+            leaders through enterprise, skills, and community restoration.
+          </p>
+        </div>
+
+        <div>
+          <div className="overflow-hidden rounded-2xl ring-1 ring-forest-100">
+            <img
+              src={elimImg}
+              alt="Proposed view of the Elim Empowerment Centre"
+              className="aspect-[4/3] w-full object-cover object-center"
+            />
+          </div>
+          <p className="mt-3 text-xs font-medium uppercase tracking-[0.16em] text-forest-500 sm:text-right">
+            Proposed view of the Elim Empowerment Centre
+          </p>
+        </div>
       </div>
     </section>
   );
@@ -45,43 +60,35 @@ function ProposedView() {
   const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.12 });
 
   return (
-    <section className="relative bg-cream-100 pb-16 sm:pb-20">
+    <section className="relative bg-gold-50 py-16 sm:py-20">
       <div
         ref={ref}
-        className={`mx-auto max-w-5xl px-5 sm:px-8 transition-all duration-700 ${
+        className={`mx-auto max-w-2xl px-5 sm:px-8 text-center transition-all duration-700 ${
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
         }`}
       >
-        <div className="overflow-hidden rounded-2xl ring-1 ring-forest-100">
-          <img
-            src={elimImg}
-            alt="Proposed view of the Elim Empowerment Centre"
-            className="w-full object-cover object-center"
-          />
-        </div>
-        <p className="mt-3 text-center text-xs font-medium uppercase tracking-[0.16em] text-forest-500">
-          Proposed view of the Elim Empowerment Centre
+        <p className="text-forest-700 leading-relaxed">
+          Elim Empowerment Centre is the physical hub of Victorious Praying
+          Women Ministry and TBWF. We are building a dedicated facility for
+          mentorship, business incubation, digital innovation, vocational
+          training, and year-round outreach, so impact is no longer limited to
+          temporary venues.
         </p>
-
-        <div className="mx-auto mt-10 max-w-3xl">
-          <p className="text-forest-700 leading-relaxed">
-            Elim Empowerment Centre is the physical hub of Victorious Praying
-            Women Ministry and TBWF. We are building a dedicated facility for
-            mentorship, business incubation, digital innovation, vocational
-            training, and year-round outreach, so impact is no longer limited to
-            temporary venues.
-          </p>
-          <ul className="mt-8 space-y-3">
-            {purposes.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-forest-700">
-                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-forest-700 text-gold-300">
-                  <Building2 className="h-4 w-4" />
-                </span>
-                <span className="pt-1.5 leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className="mt-8 space-y-4">
+          {purposes.map((item) => (
+            <li
+              key={item}
+              className="flex items-start justify-center gap-3 text-forest-700"
+            >
+              <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-forest-700 text-gold-300">
+                <Building2 className="h-4 w-4" />
+              </span>
+              <span className="pt-1.5 max-w-md text-left leading-relaxed">
+                {item}
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

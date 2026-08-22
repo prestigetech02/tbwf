@@ -3,7 +3,7 @@ import { useInView } from '@/hooks/useInView';
 
 export default function Pillars() {
   return (
-    <section id="pillars" className="relative py-24 sm:py-32 bg-cream-100">
+    <section id="pillars" className="relative pt-12 pb-24 sm:pt-14 sm:pb-32 bg-white">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         {/* Heading */}
         <div className="mx-auto max-w-2xl text-center">
@@ -20,7 +20,7 @@ export default function Pillars() {
         </div>
 
         {/* Cards */}
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {pillars.map((pillar, i) => (
             <PillarCard key={pillar.title} pillar={pillar} index={i} />
           ))}
