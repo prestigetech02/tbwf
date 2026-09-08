@@ -9,13 +9,39 @@ import {
   Eye,
   Building2,
   ArrowRight,
+  Briefcase,
+  TrendingUp,
+  HeartHandshake,
 } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
 import { GiveNowButton } from '@/components/GiveModal';
 
-const heroImg = '/images/about.png';
+const heroImg = '/images/tec/DSC_6481.jpg';
 
 const identityImg = '/images/pic2.jpg';
+
+const tbwfFocus = [
+  {
+    icon: Users,
+    title: 'Weekly Fellowships',
+    text: 'Spiritual growth and community prayer that anchor entrepreneurs in faith and purpose.',
+  },
+  {
+    icon: Briefcase,
+    title: 'Business Training',
+    text: 'Practical entrepreneurship development and strategy taught by marketplace leaders.',
+  },
+  {
+    icon: HeartHandshake,
+    title: 'Mentorship',
+    text: 'Rising leaders connected with experienced guides who walk the journey of growth with them.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Economic Empowerment',
+    text: 'Resources and capital opportunities that build lasting legacy and generational wealth.',
+  },
+];
 
 const coreValues = [
   {
@@ -23,7 +49,7 @@ const coreValues = [
     title: 'Giving',
     description:
       "Reflecting God's heart through generous time, talent, resources, and service.",
-    verse: 'It is more blessed to give than to receive — Acts 20:35',
+    verse: 'It is more blessed to give than to receive (Acts 20:35)',
   },
   {
     icon: Shield,
@@ -58,6 +84,7 @@ export default function WhoWeArePage() {
       <CoreIdentity />
       <MissionVision />
       <CoreValues />
+      <TbwfSection />
       <ElimSpotlight />
     </>
   );
@@ -70,7 +97,7 @@ function PageHero() {
         <img
           src={heroImg}
           alt="Victorious Praying Women Ministry gathering"
-          className="h-full w-full object-cover object-top"
+          className="h-full w-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-forest-800/55" />
         <div className="absolute inset-0 bg-gradient-to-br from-forest-950/92 via-forest-900/78 to-forest-700/55" />
@@ -79,18 +106,14 @@ function PageHero() {
 
       <div className="relative flex min-h-[52vh] items-end pb-16 pt-32 sm:pb-20">
         <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
-          <span className="inline-flex items-center gap-2 rounded-full bg-gold-400/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold-200 ring-1 ring-gold-400/30 animate-fade-up">
-            About VPWM
-          </span>
           <h1
-            className="mt-6 max-w-2xl font-serif text-4xl sm:text-5xl lg:text-[3.4rem] font-bold leading-[1.08] text-cream-50 animate-fade-up"
-            style={{ animationDelay: '0.1s' }}
+            className="max-w-2xl font-serif text-4xl sm:text-5xl lg:text-[3.4rem] font-bold leading-[1.08] text-cream-50 animate-fade-up"
           >
             Who We Are
           </h1>
           <p
             className="mt-5 max-w-2xl text-base sm:text-lg leading-relaxed text-cream-200 animate-fade-up"
-            style={{ animationDelay: '0.2s' }}
+            style={{ animationDelay: '0.1s' }}
           >
             Restoring God&apos;s Original Intent Through Prayer, Enterprise, and
             Holistic Empowerment.
@@ -158,7 +181,7 @@ function CoreIdentity() {
                 homes, businesses, and communities.
               </p>
               <p>
-                At VPWM, prayer is not merely an activity—it is our lifestyle.
+                At VPWM, prayer is not merely an activity; it is our lifestyle.
                 When women are rooted in God&apos;s Word, aligned in prayer, and
                 equipped with practical skills, they become powerful catalysts
                 for economic and spiritual transformation.
@@ -217,7 +240,7 @@ function MissionVision() {
             </h3>
             <p className="mt-4 text-lg leading-relaxed text-cream-200">
               To empower women globally to live out God&apos;s original intent
-              through prayer, a godly lifestyle, and holistic empowerment—
+              through prayer, a godly lifestyle, and holistic empowerment:
               impacting families, marketplace hubs, and nations with
               Christ&apos;s restorative love.
             </p>
@@ -242,7 +265,7 @@ function CoreValues() {
             Core Values
           </h2>
           <p className="mt-4 text-forest-600 leading-relaxed">
-            These convictions shape how we pray, lead, give, and serve—every
+            These convictions shape how we pray, lead, give, and serve: every
             day, in every place God sends us.
           </p>
         </div>
@@ -285,6 +308,85 @@ function CoreValues() {
               </div>
             );
           })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TbwfSection() {
+  const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.12 });
+
+  return (
+    <section className="relative py-20 sm:py-28 bg-white overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_20%,rgba(212,175,55,0.08),transparent_45%)]" />
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+        <div
+          ref={ref}
+          className={`transition-all duration-700 ${
+            inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="inline-flex items-center gap-2 rounded-full bg-gold-400/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold-700 ring-1 ring-gold-400/30">
+              Thriving Business Women Fellowship (TBWF)
+            </span>
+            <h2 className="mt-6 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-forest-900 leading-tight">
+              A platform under VPWM
+            </h2>
+            <p className="mt-5 text-base sm:text-lg leading-relaxed text-forest-700">
+              TBWF is the marketplace empowerment arm of Victorious Praying Women
+              Ministry. We equip women with biblical principles, practical
+              business knowledge, leadership skills, and the confidence to build
+              thriving enterprises that bless families, communities, and the
+              Kingdom.
+            </p>
+            
+          </div>
+
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {tbwfFocus.map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.title}
+                  className="rounded-2xl bg-cream-50 p-6 ring-1 ring-forest-100/70"
+                  style={{
+                    transitionDelay: `${i * 80}ms`,
+                    opacity: inView ? 1 : 0,
+                    transform: inView ? 'translateY(0)' : 'translateY(16px)',
+                    transition: 'opacity 0.6s ease, transform 0.6s ease',
+                  }}
+                >
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-forest-700 text-gold-300">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="mt-5 font-serif text-lg font-bold text-forest-900">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-forest-600">
+                    {item.text}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-3">
+            <Link
+              to="/#projects"
+              className="inline-flex items-center gap-2 rounded-full bg-forest-700 px-7 py-3.5 text-sm font-semibold text-cream-50 transition-all hover:bg-forest-600 hover:-translate-y-0.5"
+            >
+              Explore Initiatives
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              to="/elim-centre"
+              className="inline-flex items-center gap-2 rounded-full bg-gold-400/15 px-7 py-3.5 text-sm font-semibold text-forest-800 ring-1 ring-gold-400/35 transition-all hover:bg-gold-400/25"
+            >
+              Learn About Elim
+            </Link>
+          </div>
         </div>
       </div>
     </section>

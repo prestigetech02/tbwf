@@ -135,7 +135,7 @@ function Overview() {
             Overview
           </span>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl font-bold text-forest-900 leading-tight">
-            From managing to leading—from surviving to scaling
+            From managing to leading, from surviving to scaling
           </h2>
           <div className="mt-8 space-y-5 text-forest-700 leading-relaxed">
             <p>

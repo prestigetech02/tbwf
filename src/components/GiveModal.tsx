@@ -8,6 +8,12 @@ import {
 import { Copy, Check, X } from 'lucide-react';
 
 const accounts = [
+  {
+    currency: 'Naira',
+    number: '0109662496',
+    bank: 'GTBank',
+    accountName: 'VPWM-TBWF',
+  },
   { currency: 'USD', number: '0178803231' },
   { currency: 'Pounds', number: '0178803248' },
 ];
@@ -142,6 +148,14 @@ function GiveModal({
                 <div className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-600">
                   {account.currency}
                 </div>
+                {'accountName' in account && account.accountName ? (
+                  <p className="mt-1.5 text-sm font-medium text-forest-700">
+                    {account.accountName}
+                    {'bank' in account && account.bank
+                      ? ` · ${account.bank}`
+                      : ''}
+                  </p>
+                ) : null}
                 <div className="mt-2 flex items-center justify-between gap-3">
                   <p className="font-mono text-lg font-semibold tracking-wide text-forest-900">
                     {account.number}

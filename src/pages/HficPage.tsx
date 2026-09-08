@@ -42,7 +42,7 @@ const pillars = [
     imageAlt:
       'HFIC outreach gathering honoring pastors and church workers with food support',
     description:
-      "Honoring servants of God—many of whom work in overlooked or underserved communities—reminding them that their labor in God's vineyard is deeply appreciated.",
+      "Honoring servants of God, many of whom work in overlooked or underserved communities, reminding them that their labor in God's vineyard is deeply appreciated.",
   },
   {
     icon: CalendarHeart,
@@ -387,7 +387,7 @@ function ElimConnection() {
               </p>
               <p>
                 Elim will house permanent storage facilities, distribution
-                logistics hubs, and community welfare centers—allowing us to
+                logistics hubs, and community welfare centers, allowing us to
                 scale HFIC and run year-round food drives, skills support, and
                 benevolent programs for families in need.
               </p>

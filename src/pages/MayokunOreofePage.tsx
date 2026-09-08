@@ -157,7 +157,7 @@ function Overview() {
               <p>
                 Through targeted discipleship networks, leadership tracks, and
                 compassionate outreach, MOI acts as a bridge between potential
-                and fulfillment—providing spiritual grounding, personal
+                and fulfillment, providing spiritual grounding, personal
                 development, and practical opportunities for growth.
               </p>
             </div>
@@ -362,7 +362,7 @@ function ElimConnection() {
               </p>
               <p>
                 The Elim Empowerment Centre is designed to serve as the physical
-                base for MOI&apos;s programs—housing the mentorship hubs,
+                base for MOI&apos;s programs, housing the mentorship hubs,
                 vocational skills spaces, and youth innovation labs needed to
                 raise leaders of integrity for generations to come.
               </p>

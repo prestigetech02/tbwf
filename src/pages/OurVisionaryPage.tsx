@@ -218,7 +218,7 @@ function ElimVision() {
                 individuals are empowered to make informed decisions about their
                 health, equipped with knowledge that can help prevent and
                 address health challenges, and supported as they pursue
-                healthier, more purposeful, and fulfilling lives—with
+                healthier, more purposeful, and fulfilling lives, with
                 opportunities to thrive.
               </p>
               <p>
@@ -232,7 +232,7 @@ function ElimVision() {
             <div className="space-y-5 text-forest-700 leading-relaxed">
               <p>
                 Our desire is to create an environment where faith and
-                enterprise work together—where prayer is matched with practical
+                enterprise work together, where prayer is matched with practical
                 action, and where lives are transformed spiritually,
                 economically, emotionally, and socially.
               </p>
@@ -302,7 +302,7 @@ function Invitation() {
           <p>
             Today, we invite you to become a part of this divine assignment.
             Through your financial support, partnership, or advocacy, you are
-            helping to build more than a centre—you are investing in transformed
+            helping to build more than a centre: you are investing in transformed
             lives, stronger families, thriving businesses, and future
             generations.
           </p>

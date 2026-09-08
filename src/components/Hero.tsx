@@ -15,7 +15,7 @@ export default function Hero() {
 
       <div className="relative flex min-h-[100svh] items-center pt-24 pb-16 sm:pt-28">
         <div className="mx-auto grid w-full max-w-7xl items-center gap-10 px-4 sm:px-10 lg:grid-cols-[13fr_7fr] lg:gap-12 lg:px-16">
-          {/* Text — 65% */}
+          {/* Text: 65% */}
           <div className="max-w-2xl lg:max-w-none">
             <span className="inline-flex items-center gap-2 rounded-full bg-gold-400/15 px-4 py-1.5 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-gold-200 ring-1 ring-gold-400/30 animate-fade-up">
               The Building Project
@@ -54,7 +54,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Image — 35% */}
+          {/* Image: 35% */}
           <div
             className="animate-fade-up w-full lg:max-w-none"
             style={{ animationDelay: '0.15s' }}

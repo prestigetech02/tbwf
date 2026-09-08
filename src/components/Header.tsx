@@ -93,7 +93,7 @@ export default function Header() {
           <Link to="/" className="flex min-w-0 items-center group" onClick={closeMobile}>
             <img
               src="/images/logo.png"
-              alt="TBWF — Thriving Business Women Fellowship"
+              alt="TBWF: Thriving Business Women Fellowship"
               className="h-8 w-auto max-w-[9.5rem] object-contain object-left sm:h-11 sm:max-w-none transition-transform group-hover:scale-105"
             />
           </Link>

@@ -19,13 +19,13 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <img
                 src="/images/logo.png"
-                alt="TBWF — Thriving Business Women Fellowship"
+                alt="TBWF: Thriving Business Women Fellowship"
                 className="h-12 w-auto"
               />
             </div>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-forest-600">
               The marketplace empowerment arm of Victorious Praying Women
-              Ministry — equipping women to build thriving businesses and
+              Ministry, equipping women to build thriving businesses and
               become kingdom influencers.
             </p>
             <div className="mt-6 flex gap-3">

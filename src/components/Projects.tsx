@@ -30,7 +30,7 @@ const projects = [
   },
   {
     title: 'Mayokun Oreofe Initiative',
-    subtitle: 'MOI — Discipleship & Outreach',
+    subtitle: 'MOI: Discipleship & Outreach',
     description:
       'Restoring hope, discipling generations, and building legacy through purpose-driven outreach and mentorship.',
     image: '/images/moi/IMG-20211123-WA0042.jpg',
@@ -38,7 +38,7 @@ const projects = [
   },
   {
     title: 'Household of Faith in Celebration',
-    subtitle: 'HFIC — Vessel of Mercy',
+    subtitle: 'HFIC: Vessel of Mercy',
     description:
       'Bringing Christmas joy, dignity, and gratitude to pastors, missionaries, and church workers who serve.',
     image: '/images/hfic/_DSC3840.jpg',
@@ -60,7 +60,7 @@ export default function Projects() {
             Initiatives transforming lives and communities
           </h2>
           <p className="mt-5 text-forest-600 leading-relaxed">
-            From enterprise development to discipleship and seasonal outreach—
+            From enterprise development to discipleship and seasonal outreach,
             explore the programs shaping marketplace leaders and kingdom impact.
           </p>
         </div>

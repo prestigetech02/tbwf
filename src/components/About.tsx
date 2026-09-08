@@ -29,7 +29,7 @@ export default function About() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest-950/50 to-transparent" />
             </div>
-            {/* floating badge — inset on mobile to avoid clipping */}
+            {/* floating badge: inset on mobile to avoid clipping */}
             <div className="absolute bottom-3 left-3 right-3 sm:bottom-auto sm:-bottom-6 sm:left-auto sm:-right-4 lg:-right-6 flex items-center gap-3 rounded-2xl bg-cream-50 px-4 py-3 sm:px-5 sm:py-4 ring-1 ring-forest-100">
               <span className="font-serif text-2xl sm:text-3xl font-bold text-forest-800">VPWM</span>
               <span className="text-xs leading-tight font-medium text-forest-600">
@@ -58,7 +58,7 @@ export default function About() {
                 We believe that true transformation occurs when spiritual
                 growth, personal development, and economic empowerment come
                 together. TBWF exists to see women rise as wholehearted
-                disciples and confident marketplace leaders — building
+                disciples and confident marketplace leaders, building
                 businesses that bless their families, communities, and the
                 Kingdom.
               </p>

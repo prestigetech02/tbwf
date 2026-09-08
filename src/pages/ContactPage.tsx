@@ -49,7 +49,7 @@ const waysToConnect = [
     icon: MessageCircle,
     title: 'General Inquiry',
     description:
-      'Project details, mentorship, speaking requests, or anything else on your heart — reach out.',
+      'Project details, mentorship, speaking requests, or anything else on your heart: reach out.',
   },
 ];
 
@@ -304,7 +304,7 @@ export default function ContactPage() {
                 {sent ? (
                   <>
                     <CheckCircle2 className="h-4 w-4" />
-                    Message Sent — Thank You!
+                    Message Sent. Thank You!
                   </>
                 ) : (
                   <>

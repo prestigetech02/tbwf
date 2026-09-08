@@ -273,7 +273,7 @@ function PartnerCta() {
             </h2>
             <p className="mt-6 text-forest-700 leading-relaxed">
               Proceeds and partnerships from our annual summits directly feed
-              into our long-term vision—the establishment of the Elim
+              into our long-term vision: the establishment of the Elim
               Empowerment Centre. By supporting our business summit initiatives,
               you help provide business incubation, vocational training, and
               technical hubs for thousands of women and youth.
